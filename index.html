@@ -450,7 +450,7 @@
 					<p>Do you have a Web Project of quality good looking and simple to administrate.</p>
 					<p>Send me a message.</p>
 					<div class="space30"></div>
-					<a href="#" class="btn btn-lg btn-primary">Contact me <i class="fa fa-whatsapp"></i></a>
+					<a href="https://wa.me/&#53;&#50;&#56;&#49;&#49;&#57;&#49;&#56;&#52;&#54;&#51;&#50;?text=I%20would%20like%20to%20request%20Web%20Development%20Services" class="btn btn-lg btn-primary" target="_blank">Contact me <i class="fa fa-whatsapp"></i></a>
 				</div>
 			</div>
 		</div>
@@ -469,10 +469,10 @@
 					<div class="contact-info"><i class="fa fa-map-marker"></i><br>Monterrey<br>Nuevo Leon, MX 64370</div>
 				</li>
 				<li>
-					<div class="contact-info"><i class="fa fa-phone"></i><br>+52 (811) 918-4632</div>
+					<div class="contact-info"><i class="fa fa-phone"></i><br><a href="tel:&plus;&#53;&#50;&#56;&#49;&#49;&#57;&#49;&#56;&#52;&#54;&#51;&#50;">&plus;&#53;&#50; &lpar;&#56;&#49;&#49;&rpar; &#57;&#49;&#56;-&#52;&#54;&#51;&#50;</a></div>
 				</li>
 				<li>
-					<div class="contact-info no-border"><i class="fa fa-envelope"></i><br>pachogzz@gmail.com</div>
+					<div class="contact-info no-border"><i class="fa fa-envelope"></i><br><a id="mlink" href="">Email me</a></div>
 				</li>
 				<li class="pull-right">
 					<div class="footer-social">
@@ -504,6 +504,18 @@
 <script src="js/main.js"></script>
 <script src="js/vendors/mc/jquery.ketchup.all.min.js"></script>
 <script src="js/vendors/mc/main.js"></script>
+
+<script>
+/* 1. define variables */
+var me = "pachogzz";
+var place = "gmail.com";
+
+/* 2. find email link to replace */
+var elink = document.getElementById("mlink");
+
+/* 3. replace link href with variables  */
+elink.href = `mailto:${me}@${place}`;
+</script>
 
 </body>
 </html>
