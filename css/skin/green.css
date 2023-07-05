@@ -1,215 +1,223 @@
+/** 
+ * Colors:
+ * #21aa64
+ * #03537f
+ * #197f47
+ * #02354c
+ * */
+
 a:hover {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .navbar-lg .navbar-nav > li > a:hover {
-	color:#4CAF50;
+	color:#21aa64;
 }
 
 .navbar-login a:hover {
-	border:2px solid #4CAF50 !important;
-	color:#4CAF50;
+	border:2px solid #21aa64 !important;
+	color:#21aa64;
 }
 
 .navbar-login a {
-	background: #4CAF50;
-	border:2px solid #4CAF50;
+	background: #21aa64;
+	border:2px solid #21aa64;
 }
 
 .dropdown-menu > li > a:hover {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .intro6 p.lead {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .intro16 li i {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .intro18 .intro-form2-dark {
-	background: #4CAF50;
+	background: #21aa64;
 }
 
 .app-btn a {
-	background: #4CAF50;
+	background: #21aa64;
 }
 
 .btn.btn-primary {
-	background: #4CAF50;
-	border: 1px solid #4CAF50;
+	background: #21aa64;
+	border: 1px solid #21aa64;
 }
 
 .service-box i {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .service2 {
-	background: #4CAF50;
+	background: #21aa64;
 }
 
 .s2-box:hover .s2-box-ico div {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .icon-box-square .text-center span {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .list li i {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .ai-list ul li i {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .info-content2 {
-	background: #4CAF50 !important;
+	background: #21aa64 !important;
 }
 
 .video-box:hover span {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .video-box:hover a span {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .fc-info a {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .pricing__title {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .pricing__item .btn {
-	background: #4CAF50;
-	border-color: #4CAF50;
+	background: #21aa64;
+	border-color: #21aa64;
 }
 
 .rmore {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .pagination > li.active a:hover ,
 .pagination > li a:hover ,
 .pagination > li a:focus ,
 .pagination > li.active a {
-	background: #4CAF50;
-	border: 1px solid #4CAF50;
+	background: #21aa64;
+	border: 1px solid #21aa64;
 }
 
 .widget_categories ul li a:hover {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .portfolio-filter li a.active {
-	color: #4CAF50;
-	border: 2px solid #4CAF50;
+	color: #21aa64;
+	border: 2px solid #21aa64;
 }
 
 .c-info i {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 #contact-form {
-	background: #4CAF50;
+	background: #21aa64;
 }
 
 .progress-bar-success {
-	background-color: #4CAF50;
+	background-color: #21aa64;
 }
 
 .bg-primary {
-	background: #4CAF50;
+	background: #21aa64;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
-	color: #4CAF50 !important;
+	color: #21aa64 !important;
 }
 
 .nav-tabs > li > a:after {
-	background: #4CAF50;
+	background: #21aa64;
 }
 
 .tab-nav > li > a:after {
-	background: #4CAF50;
+	background: #21aa64;
 }
 
 .lead a {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 blockquote {
-	border-left: 5px solid #4CAF50;
+	border-left: 5px solid #21aa64;
 }
 
 .contact-info i {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 blockquote.inverse {
-	border-right: 5px solid #4CAF50;
+	border-right: 5px solid #21aa64;
 }
 
 .btn-circle:hover,
 .btn-info {
-	background: #4CAF50 !important;
-	border-color: #4CAF50 !important;
+	background: #21aa64 !important;
+	border-color: #21aa64 !important;
 }
 
 .process-step2 .btn-circle:hover,
 .process-step2 .btn-info {
-	background: #4CAF50 !important;
-	border-color: #4CAF50 !important;
+	background: #21aa64 !important;
+	border-color: #21aa64 !important;
 }
 
 .stats1-info i {
-	color: #4CAF50;
+	color: #21aa64;
 }
 
 .dropcap-color .dropcap-square {
-	border: 2px solid #4CAF50;
-	color: #4CAF50;
+	border: 2px solid #21aa64;
+	color: #21aa64;
 }
 
 .dropcap-color .dropcap-radius {
-	border: 2px solid #4CAF50;
-	background: #4CAF50;
+	border: 2px solid #21aa64;
+	background: #21aa64;
 }
 
 .dropcap-color .dropcap-round {
-	border: 2px solid #4CAF50;
-	background: #4CAF50;
+	border: 2px solid #21aa64;
+	background: #21aa64;
 }
 
 .cta-btn:hover {
-	background: #4CAF50;
-	border: 2px solid #4CAF50;
+	background: #21aa64;
+	border: 2px solid #21aa64;
 }
 
 .cta-wrap.bg-dark .cta-btn:hover {
-	background: #4CAF50;
-	border: 2px solid #4CAF50;
+	background: #21aa64;
+	border: 2px solid #21aa64;
 }
 
 .pricing2 .price {
-	background-color: #4CAF50;
+	background-color: #21aa64;
 }
 
 .pricing2 .btn {
-	background: #4CAF50;
-	border-color: #4CAF50;
+	background: #21aa64;
+	border-color: #21aa64;
 }
 
 @media only screen and (min-width: 280px)  and (max-width: 767px)  {
 
 .navbar-nav > li > a:hover,
 .dropdown-menu > li > a:hover {
-	color: #4CAF50 !important;
+	color: #21aa64 !important;
 }
 
 }

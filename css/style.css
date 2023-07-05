@@ -159,7 +159,7 @@ ul, ol, li {
 }
 
 .boxed {
-	background: #111 url(../images/bg/pattern.png) repeat fixed;
+	background: #02354c url(../images/bg/pattern.png) repeat fixed;
 }
 
 .boxed .body {
@@ -229,7 +229,7 @@ ul, ol, li {
 }
 
 .navbar-lg .navbar-brand {
-	padding: 40px 0 0;
+	padding: 5px 0 0;
 	font-size: 28px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -280,7 +280,7 @@ ul, ol, li {
 	padding: 0;
 	margin: 0;
 	border-radius: 0px;
-	background: #111;
+	background: #02354c;
 	top: 65px;
 	left: 0 !important;
 	right: auto !important;
@@ -399,7 +399,7 @@ ul, ol, li {
 /* 4.1. Intro / 1 */
 
 .intro1 {
-	background: #111 url(../images/bg/1.jpg) no-repeat center;
+	background: #02354c url(../images/bg/1.jpg) no-repeat center;
 	background-size: cover;
 	padding: 180px 0 150px;
 }
@@ -479,7 +479,7 @@ ul, ol, li {
 /* 4.2. Intro / 2 */
 
 .intro2 {
-	background: #111 url(../images/bg/2.jpg) no-repeat center;
+	background: #02354c url(../images/bg/2.jpg) no-repeat center;
 	background-size: cover;
 	padding: 160px 0 140px;
 }
@@ -534,7 +534,7 @@ ul, ol, li {
 /* 4.3. Intro / 3 */
 
 .intro3 {
-	background: #111 url(../images/bg/3.jpg) no-repeat center;
+	background: #02354c url(../images/bg/3.jpg) no-repeat center;
 	background-size: cover;
 	padding: 150px 0 0;
 }
@@ -618,7 +618,7 @@ ul, ol, li {
 /* 4.4. Intro / 4 */
 
 .intro4 {
-	background: #111 url(../images/bg/4.jpg) no-repeat top center;
+	background: #02354c url(../images/bg/4.jpg) no-repeat top center;
 	background-size: cover;
 	padding: 220px 0 0;
 	margin-bottom: 20px;
@@ -655,7 +655,7 @@ ul, ol, li {
 /* 4.5. Intro / 5 */
 
 .intro5 {
-	background: #111 url(../images/bg/5.jpg) no-repeat center;
+	background: #02354c url(../images/bg/5.jpg) no-repeat center;
 	background-size: cover;
 	padding: 150px 0 0;
 }
@@ -697,7 +697,7 @@ ul, ol, li {
 /* 4.6. Intro / 6 */
 
 .intro6 {
-	background: #111 url(../images/bg/6.jpg) no-repeat center;
+	background: #02354c url(../images/bg/6.jpg) no-repeat center;
 	background-size: cover;
 	padding: 0;
 	height: 100vh;
@@ -747,7 +747,7 @@ ul, ol, li {
 /* 4.7. Intro / 7 */
 
 .intro7 {
-	background: #111 url(../images/bg/7.jpg) no-repeat center;
+	background: #02354c url(../images/bg/7.jpg) no-repeat center;
 	background-size: cover;
 	padding: 185px 0 130px;
 }
@@ -808,7 +808,7 @@ ul, ol, li {
 /* 4.8. Intro / 8 */
 
 .intro8 {
-	background: #111 url(../images/bg/8.jpg) no-repeat center;
+	background: #02354c url(../images/bg/8.jpg) no-repeat center;
 	background-size: cover;
 	padding: 160px 0 0;
 }
@@ -839,7 +839,7 @@ ul, ol, li {
 /* 4.9. Intro / 9 */
 
 .intro9 {
-	background: #111 url(../images/bg/9.jpg) no-repeat center;
+	background: #02354c url(../images/bg/9.jpg) no-repeat center;
 	background-size: cover;
 	padding: 180px 0 0;
 	overflow: hidden;
@@ -873,7 +873,7 @@ ul, ol, li {
 /* 4.10. Intro / 10 */
 
 .intro10 {
-	background: #111 url(../images/bg/10.jpg) no-repeat center;
+	background: #02354c url(../images/bg/10.jpg) no-repeat center;
 	background-size: cover;
 	padding: 220px 0 170px;
 }
@@ -918,7 +918,7 @@ ul, ol, li {
 /* 4.11. Intro / 11 */
 
 .intro11 {
-	background: #111 url(../images/bg/11.jpg) no-repeat center;
+	background: #02354c url(../images/bg/11.jpg) no-repeat center;
 	background-size: cover;
 	padding: 230px 0 220px;
 }
@@ -955,7 +955,7 @@ ul, ol, li {
 }
 
 .intro12 {
-	background: #111 url(../images/bg/12.jpg) no-repeat center;
+	background: #02354c url(../images/bg/12.jpg) no-repeat center;
 	background-size: cover;
 	padding: 260px 0 230px;
 }
@@ -980,7 +980,7 @@ ul, ol, li {
 /* 4.13. Intro / 13 */
 
 .intro13 {
-	background: #111 url(../images/bg/13.jpg) no-repeat center;
+	background: #02354c url(../images/bg/13.jpg) no-repeat center;
 	background-size: cover;
 	padding: 200px 0 140px;
 }
@@ -1043,7 +1043,7 @@ ul, ol, li {
 /* 4.14. Intro / 14 */
 
 .intro14 {
-	background: #111 url(../images/bg/14.jpg) no-repeat center;
+	background: #02354c url(../images/bg/14.jpg) no-repeat center;
 	background-size: cover;
 	padding: 170px 0 130px;
 }
@@ -1101,7 +1101,7 @@ ul, ol, li {
 /* 4.15. Intro / 15 */
 
 .intro15 {
-	background: #111 url(../images/bg/15.jpg) no-repeat center;
+	background: #02354c url(../images/bg/15.jpg) no-repeat center;
 	background-size: cover;
 	padding: 120px 0 80px;
 }
@@ -1326,7 +1326,7 @@ ul, ol, li {
 /* 4.16. Intro / 16 */
 
 .intro16 {
-	background: #111 url(../images/bg/16.jpg) no-repeat center;
+	background: #02354c url(../images/bg/16.jpg) no-repeat center;
 	background-size: cover;
 	padding: 120px 0 0;
 }
@@ -1368,7 +1368,7 @@ ul, ol, li {
 /* 4.17. Intro / 17 */
 
 .intro17 {
-	background: #111 url(../images/bg/17.jpg) no-repeat center;
+	background: #02354c url(../images/bg/17.jpg) no-repeat center;
 	background-size: cover;
 	padding: 220px 0 170px;
 }
@@ -1376,7 +1376,7 @@ ul, ol, li {
 /* 4.18. Intro / 18 */
 
 .intro18 {
-	background: #111 url(../images/bg/18.jpg) no-repeat center;
+	background: #02354c url(../images/bg/18.jpg) no-repeat center;
 	background-size: cover;
 	padding: 190px 0 0;
 	margin-bottom: 40px;
@@ -1420,7 +1420,7 @@ ul, ol, li {
 /* 4.19. Intro / 19 */
 
 .intro19 {
-	background: #111 url(../images/bg/19.jpg) no-repeat center;
+	background: #02354c url(../images/bg/19.jpg) no-repeat center;
 	background-size: cover;
 	padding: 150px 0 0px;
 }
@@ -1499,13 +1499,13 @@ ul, ol, li {
 /* 4.20. Intro / 20 */
 
 .intro20 {
-	background: #111 url(../images/bg/20.jpg) no-repeat center;
+	background: #02354c url(../images/bg/20.jpg) no-repeat center;
 	background-size: cover;
 }
 
 .intro20 .overlay {
 	opacity: 0.65;
-	background: #111;
+	background: #02354c;
 }
 
 .btn {
@@ -1539,8 +1539,8 @@ ul, ol, li {
 }
 
 .btn.btn-primary:hover {
-	background: #111;
-	border: 1px solid #111;
+	background: #02354c;
+	border: 1px solid #02354c;
 	color: #fff;
 }
 
@@ -1551,15 +1551,15 @@ ul, ol, li {
 }
 
 .btn.btn-default:hover {
-	background: #111;
-	border: 1px solid #111;
+	background: #02354c;
+	border: 1px solid #02354c;
 	color: #fff;
 }
 
 .btn.btn-dark {
 	color: #fff;
-	background-color: #111;
-	border: 1px solid #111;
+	background-color: #02354c;
+	border: 1px solid #02354c;
 }
 
 .btn.btn-lg {
@@ -2209,7 +2209,7 @@ ul, ol, li {
 /* 13. PAGE HEADER */
 
 .page_head {
-	background: url(../images/bg/1.jpg) no-repeat top center;
+	background: url(../images/stock/turned-gray-laptop-computer.jpg) no-repeat top center;
 	background-size: cover;
 	padding: 160px 0 80px;
 }
@@ -2634,7 +2634,7 @@ ul, ol, li {
 }
 
 .team-dark {
-	background: #111;
+	background: #02354c;
 }
 
 .team-dark .team-box h4 ,
@@ -2990,7 +2990,7 @@ ul, ol, li {
 }
 
 .progress {
-	margin-top: 40px;
+	margin-top: 10px;
 	position: relative;
 	overflow: visible;
 }
@@ -3549,8 +3549,13 @@ footer .list-inline li {
 	letter-spacing: 4px;
 }
 
+.footer-logo img{
+	display: block;
+	margin: 0 auto;
+}
+
 .footer-copy {
-	background: #111;
+	background: #02354c;
 	padding: 20px 0;
 	text-align: center;
 	color: #fff;
@@ -3695,7 +3700,7 @@ footer .list-inline li {
 	font-size: 21px;
 	line-height: 33px;
 	font-weight: 300;
-	color: #111;
+	color: #02354c;
 	padding: 0 21% 20px;
 	letter-spacing: 0;
 	font-family: Droid Serif;
@@ -3706,7 +3711,7 @@ footer .list-inline li {
 	font-size: 11px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #111;
+	color: #02354c;
 }
 
 .testimonials-white i {
@@ -5781,7 +5786,7 @@ input:focus, textarea:focus {
 		border-top: none;
 		box-shadow: none;
 		position: absolute;
-		background: #111;
+		background: #02354c;
 		top: 80px;
 		width: 100%;
 		max-width: 500px;
