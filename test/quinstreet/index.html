@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernize - Home Empowerment&trade; | QuinStreet</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/skeleton.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="twelve columns">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/Logo.svg" alt="Modernize - Home Empowerment&trade;" height="37" /></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="main-content" class="main-content">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="eight offset-by-two columns">
+                    <div class="form__box">
+                        <div class="form__head">
+                            <h2>Enter to win a 3rd generation Nest <br>Learning Thermostat worth $249.</h2>
+                        </div>
+                        <div class="form__form">
+                            <form id="contactForm" novalidate>
+                                <div class="form-group">
+                                    <label for="name"hidden="hidden">Name*</label>
+                                    <input type="text" id="name" name="name" placeholder="Name" required minlength="2" class="form-control">
+                                </div>
+                                <div class="row">
+                                    <div class="seven columns">
+                                        <div class="form-group">
+                                            <label for="city"hidden="hidden">City</label>
+                                            <input type="text" id="city" name="city" placeholder="City" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="five columns">
+                                        <div class="form-group">
+                                            <label for="state"hidden="hidden">State</label>
+                                            <input type="text" id="state" name="state" placeholder="State" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone"hidden="hidden">Phone*</label>
+                                    <input type="text" id="phone" name="phone" placeholder="Phone Number" required class="form-control" placeholder="(XXX) XXX-XXXX">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"hidden="hidden">Email*</label>
+                                    <input type="email" id="email" name="email" placeholder="Email Address" required class="form-control">
+                                </div>
+                                <button type="submit" id="submitButton" class="btn btn-primary">ENTER TO WIN</button>
+                            </form>
+
+                            <script>
+                                $(document).ready(function () {
+                                    $('#phone').mask('(000) 000-0000');
+
+                                    $('#contactForm').on('submit', function (e) {
+                                        e.preventDefault();
+                                        let isValid = true;
+
+                                        // Validation
+                                        $('#contactForm input[required]').each(function () {
+                                            if (!this.value.trim()) {
+                                                $(this).css('border-color', '#D50303');
+                                                $(this).css('border-width', '2');
+                                                isValid = false;
+                                            } else {
+                                                $(this).css('border-color', '');
+                                            }
+                                        });
+
+                                        if ($('#name').val().trim().length < 2) {
+                                            $('#name').css('border-color', '#D50303');
+                                            isValid = false;
+                                        }
+
+                                        if (!isValid) return;
+
+                                        // Change button text to "Processing..."
+                                        $('#submitButton').text('PROCESSING...').prop('disabled', true);
+
+                                        // Submit via AJAX
+                                        $.ajax({
+                                            url: 'https://formsws-hilstaging-com-0adj9wt8gzyq.runscope.net/solar',
+                                            method: 'POST',
+                                            data: $('#contactForm').serialize(),
+                                            success: function () {
+                                                $('#submitButton').text('SUBMITTED');
+                                            },
+                                            error: function () {
+                                                $('#submitButton').text('FAILED');
+                                            },
+                                            complete: function () {
+                                                $('#submitButton').prop('disabled', false);
+                                            }
+                                        });
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="eight offset-by-two columns">
+                    <div class="featured__promos">
+                        <div class="promo__box">
+                            <div class="promo__box__headline">
+                                <h3>EVEN MORE SAVINGS</h3>
+                            </div>
+                            <div class="promo__box__content">
+                                <span>ADVERTORIAL</span>
+                                <h4>Tricks Homeowners Use to Eliminate Bills</h4>
+                                <p>Surging energy bills, unpredictable weather patterns and dissatisfaction with utility companies have homeowners scrambling…</p>
+                                <a href="https://google.com" target="_blank" rel="noopener follow">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
