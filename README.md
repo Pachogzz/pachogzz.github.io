@@ -36,5 +36,3 @@ Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** 
 ---
 
 **Desarrollado con ❤️ en Monterrey, México**
-
-¿Interesado en trabajar juntos? [¡Hablemos por WhatsApp!](https://wa.me/5281191846320?text=Hola%20Pacho!%20Me%20interesa%20trabajar%20contigo.)
