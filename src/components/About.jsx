@@ -4,12 +4,12 @@ const About = () => {
   const highlights = [
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "12+ Años",
+      title: "14+ Años",
       description: "De experiencia en desarrollo web"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "8+ Años",
+      title: "10+ Años",
       description: "Especializándome en WordPress"
     },
     {
