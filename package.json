@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Pacho Gonzalez - Modern React Portfolio",
-  "author": "Francisco Gonzalez (Pacho)",
+  "author": "Francisco (Pacho) Gonzalez",
   "homepage": "https://pachogzz.github.io",
   "scripts": {
     "dev": "vite",

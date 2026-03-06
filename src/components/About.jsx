@@ -4,12 +4,12 @@ const About = () => {
   const highlights = [
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "12+ Años",
+      title: "15+ Años",
       description: "De experiencia en desarrollo web"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "8+ Años",
+      title: "12 Años",
       description: "Especializándome en WordPress"
     },
     {
@@ -81,12 +81,12 @@ const About = () => {
           {/* About Content */}
           <div data-aos="fade-left">
             <h3 className="text-2xl font-bold text-white mb-6">
-              Francisco Gonzalez (Pacho)
+              Francisco (Pacho) Gonzalez
             </h3>
             
             <div className="space-y-4 text-slate-400 leading-relaxed mb-8">
               <p>
-                Soy un desarrollador WordPress con más de <span className="text-primary-400 font-semibold">12 años de experiencia</span> en el ciclo completo de desarrollo web. Durante los últimos 8 años, me he especializado profundamente en WordPress, convirtiéndome en un experto en el desarrollo de temas y soluciones personalizadas.
+                Soy un desarrollador WordPress con más de <span className="text-primary-400 font-semibold">15 años de experiencia</span> en el ciclo completo de desarrollo web. Durante los últimos 12 años, me he especializado profundamente en WordPress, convirtiéndome en un experto en el desarrollo de temas y soluciones personalizadas.
               </p>
               
               <p>
@@ -106,10 +106,7 @@ const About = () => {
                   <span className="text-primary-400">📍</span> Monterrey, Nuevo León, México
                 </p>
                 <p className="text-slate-400">
-                  <span className="text-primary-400">📧</span> pachogzz@gmail.com
-                </p>
-                <p className="text-slate-400">
-                  <span className="text-primary-400">📱</span> +52 (811) 918-4632
+                  <span className="text-primary-400">📧</span> pachogzzm [at] gmail [dot] com
                 </p>
               </div>
             </div>

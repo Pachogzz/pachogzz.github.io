@@ -1,8 +1,8 @@
-# 🚀 Francisco Gonzalez (Pacho) - Modern Portfolio
+# 🚀 Francisco (Pacho) Gonzalez - Modern Portfolio
 
 ## 📋 Descripción
 
-Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** que presenta mi experiencia como Desarrollador WordPress con más de 12 años en el desarrollo web. El sitio está diseñado como una Single Page Application (SPA) con un tema oscuro elegante y animaciones fluidas.
+Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** que presenta mi experiencia como Desarrollador WordPress con más de 15 años en el desarrollo web. El sitio está diseñado como una Single Page Application (SPA) con un tema oscuro elegante y animaciones fluidas.
 
 ## ✨ Características Principales
 
@@ -31,4 +31,10 @@ Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** 
 
 ## 📄 Licencia
 
-© 2024 Francisco Gonzalez (Pacho). Todos los derechos reservados.
+© 2026 Francisco (Pacho) Gonzalez. Todos los derechos reservados.
+
+---
+
+**Desarrollado con ❤️ en Monterrey, México**
+
+¿Interesado en trabajar juntos? [¡Hablemos por WhatsApp!](https://wa.me/5281191846320?text=Hola%20Pacho!%20Me%20interesa%20trabajar%20contigo.)

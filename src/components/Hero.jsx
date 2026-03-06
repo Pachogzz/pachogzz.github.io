@@ -26,13 +26,13 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl font-light text-slate-300 mb-8">
-            Desarrollador WordPress & ReactJS
+            Desarrollador Web Especializado en Tecnologías Modernas
           </p>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="200" className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-slate-400 mb-12 leading-relaxed">
-            Desarrollador WordPress con más de <span className="text-primary-400 font-semibold">12 años de experiencia</span> en el ciclo completo de desarrollo web y más de <span className="text-primary-400 font-semibold">8 años de especialización en WordPress</span>. Experto en el desarrollo de temas y soluciones a la medida, combinando una sólida formación en Diseño Gráfico para crear experiencias de usuario (UX) intuitivas y funcionales.
+            Desarrollador con más de <span className="text-primary-400 font-semibold">15 años de experiencia</span> en el ciclo completo de desarrollo web, especializado en WordPress y tecnologías modernas. Experto en la creación de soluciones a medida, combinando una sólida formación en Diseño Gráfico para crear experiencias de usuario (UX) intuitivas y funcionales.
           </p>
         </div>
 
