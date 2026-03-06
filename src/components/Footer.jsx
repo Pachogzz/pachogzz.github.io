@@ -7,25 +7,25 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-5 h-5" />,
-      url: 'https://linkedin.com/in/pachogzz',
+      url: 'https://linkedin.com/in/pachogzzm',
       color: 'hover:text-blue-400'
     },
     {
       name: 'GitHub', 
       icon: <Github className="w-5 h-5" />,
-      url: 'https://github.com/pachogzz',
+      url: 'https://github.com/pachogzzm',
       color: 'hover:text-gray-400'
     },
     {
       name: 'Email',
       icon: <Mail className="w-5 h-5" />,
-      url: 'mailto:pachogzz@gmail.com',
+      url: 'mailto:pachogzzm@gmail.com',
       color: 'hover:text-primary-400'
     },
     {
       name: 'WhatsApp',
       icon: <Phone className="w-5 h-5" />,
-      url: 'https://wa.me/5281191846320?text=Hola%20Pacho!%20Me%20interesa%20trabajar%20contigo.',
+      url: 'https://wa.me/5281191846320?text=Hola!%20Me%20interesa%20trabajar%20contigo.',
       color: 'hover:text-green-400'
     }
   ]
@@ -62,8 +62,7 @@ const Footer = () => {
             </p>
             <div className="text-slate-400 text-sm">
               <p>📍 Monterrey, Nuevo León, México</p>
-              <p>📧 pachogzz@gmail.com</p>
-              <p>📱 +52 (811) 918-4632</p>
+              <p>📧 pachogzzm [at] gmail [dot] com</p>
             </div>
           </div>
 

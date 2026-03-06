@@ -159,10 +159,7 @@ const Projects = () => {
 
         {/* More Projects CTA */}
         <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="600">
-          <p className="text-slate-400 mb-6">
-            ¿Quieres ver más proyectos o discutir una colaboración?
-          </p>
-          <a 
+          <a
             href="#contact"
             className="btn-primary inline-flex items-center gap-2"
           >

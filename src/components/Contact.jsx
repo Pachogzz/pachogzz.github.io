@@ -19,7 +19,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     // Create WhatsApp message
-    const whatsappMessage = `Hola Pacho! 👋
+    const whatsappMessage = `Hola! 👋
 
 *Nombre:* ${formData.name}
 *Email:* ${formData.email}
@@ -30,7 +30,7 @@ ${formData.message}
 Me interesa trabajar contigo en un proyecto web.`
 
     const encodedMessage = encodeURIComponent(whatsappMessage)
-    const whatsappUrl = `https://wa.me/5281191846320?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/52?text=${encodedMessage}`
     
     window.open(whatsappUrl, '_blank')
     
@@ -46,15 +46,9 @@ Me interesa trabajar contigo en un proyecto web.`
       subinfo: "México 64370"
     },
     {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Teléfono",
-      info: "+52 (811) 918-4632",
-      subinfo: "WhatsApp disponible"
-    },
-    {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      info: "pachogzz@gmail.com",
+      info: "pachogzzm [at] gmail [dot] com",
       subinfo: "Respuesta en 24h"
     }
   ]
@@ -198,7 +192,7 @@ Me interesa trabajar contigo en un proyecto web.`
                   ¿Prefieres ir directo al grano? Envíame un mensaje por WhatsApp.
                 </p>
                 <a 
-                  href="https://wa.me/5281191846320?text=Hola%20Pacho!%20Me%20interesa%20trabajar%20contigo%20en%20un%20proyecto%20web."
+                  href="https://wa.me/52?text=Hola!%20Me%20interesa%20trabajar%20contigo%20en%20un%20proyecto%20web."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"

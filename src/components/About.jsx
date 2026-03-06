@@ -106,10 +106,7 @@ const About = () => {
                   <span className="text-primary-400">📍</span> Monterrey, Nuevo León, México
                 </p>
                 <p className="text-slate-400">
-                  <span className="text-primary-400">📧</span> pachogzz@gmail.com
-                </p>
-                <p className="text-slate-400">
-                  <span className="text-primary-400">📱</span> +52 (811) 918-4632
+                  <span className="text-primary-400">📧</span> pachogzzm [at] gmail [dot] com
                 </p>
               </div>
             </div>
