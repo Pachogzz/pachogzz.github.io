@@ -2,7 +2,7 @@
 
 ## 📋 Descripción
 
-Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** que presenta mi experiencia como Desarrollador WordPress con más de 12 años en el desarrollo web. El sitio está diseñado como una Single Page Application (SPA) con un tema oscuro elegante y animaciones fluidas.
+Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** que presenta mi experiencia como Desarrollador WordPress con más de 15 años en el desarrollo web. El sitio está diseñado como una Single Page Application (SPA) con un tema oscuro elegante y animaciones fluidas.
 
 ## ✨ Características Principales
 
@@ -31,7 +31,7 @@ Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** 
 
 ## 📄 Licencia
 
-© 2026 Francisco (Pacho) Gonzalez. Todos los derechos reservados.
+© 2024 Francisco (Pacho) Gonzalez. Todos los derechos reservados.
 
 ---
 

@@ -4,12 +4,12 @@ const About = () => {
   const highlights = [
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "14+ Años",
+      title: "15+ Años",
       description: "De experiencia en desarrollo web"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "10+ Años",
+      title: "12 Años",
       description: "Especializándome en WordPress"
     },
     {
@@ -86,7 +86,7 @@ const About = () => {
             
             <div className="space-y-4 text-slate-400 leading-relaxed mb-8">
               <p>
-                Soy un desarrollador WordPress con más de <span className="text-primary-400 font-semibold">12 años de experiencia</span> en el ciclo completo de desarrollo web. Durante los últimos 8 años, me he especializado profundamente en WordPress, convirtiéndome en un experto en el desarrollo de temas y soluciones personalizadas.
+                Soy un desarrollador WordPress con más de <span className="text-primary-400 font-semibold">15 años de experiencia</span> en el ciclo completo de desarrollo web. Durante los últimos 12 años, me he especializado profundamente en WordPress, convirtiéndome en un experto en el desarrollo de temas y soluciones personalizadas.
               </p>
               
               <p>

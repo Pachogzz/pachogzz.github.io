@@ -58,7 +58,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-slate-400 leading-relaxed">
-              Desarrollador WordPress con más de 12 años de experiencia, especializado en migración de sitios estáticos a WordPress y desarrollo con ReactJS.
+              Desarrollador WordPress con más de 15 años de experiencia; especializado en migración de sitios estáticos a WordPress y desarrollo con Tecnologías Modernas.
             </p>
             <div className="text-slate-400 text-sm">
               <p>📍 Monterrey, Nuevo León, México</p>

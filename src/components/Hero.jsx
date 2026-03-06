@@ -32,7 +32,7 @@ const Hero = () => {
 
         <div data-aos="fade-up" data-aos-delay="200" className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-slate-400 mb-12 leading-relaxed">
-            Desarrollador con más de <span className="text-primary-400 font-semibold">12 años de experiencia</span> en el ciclo completo de desarrollo web, especializado en WordPress y tecnologías modernas. Experto en la creación de soluciones a medida, combinando una sólida formación en Diseño Gráfico para crear experiencias de usuario (UX) intuitivas y funcionales.
+            Desarrollador con más de <span className="text-primary-400 font-semibold">15 años de experiencia</span> en el ciclo completo de desarrollo web, especializado en WordPress y tecnologías modernas. Experto en la creación de soluciones a medida, combinando una sólida formación en Diseño Gráfico para crear experiencias de usuario (UX) intuitivas y funcionales.
           </p>
         </div>
 
