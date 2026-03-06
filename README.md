@@ -31,7 +31,7 @@ Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** 
 
 ## 📄 Licencia
 
-© 2024 Francisco (Pacho) Gonzalez. Todos los derechos reservados.
+© 2026 Francisco (Pacho) Gonzalez. Todos los derechos reservados.
 
 ---
 
