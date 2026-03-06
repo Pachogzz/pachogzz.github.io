@@ -81,7 +81,7 @@ const About = () => {
           {/* About Content */}
           <div data-aos="fade-left">
             <h3 className="text-2xl font-bold text-white mb-6">
-              Francisco Gonzalez (Pacho)
+              Francisco (Pacho) Gonzalez
             </h3>
             
             <div className="space-y-4 text-slate-400 leading-relaxed mb-8">

@@ -54,7 +54,7 @@ const Footer = () => {
                 P
               </div>
               <h3 className="text-xl font-bold text-white">
-                Francisco Gonzalez
+                Francisco (Pacho) Gonzalez
               </h3>
             </div>
             <p className="text-slate-400 leading-relaxed">
@@ -125,7 +125,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-slate-400 text-sm text-center md:text-left">
               <p className="flex items-center justify-center md:justify-start gap-1">
-                © {currentYear} Francisco Gonzalez (Pacho). Hecho con 
+                © {currentYear} Francisco (Pacho) Gonzalez. Hecho con 
                 <Heart className="w-4 h-4 text-red-500 animate-pulse" /> 
                 en Monterrey, México.
               </p>

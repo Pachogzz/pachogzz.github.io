@@ -1,4 +1,4 @@
-# 🚀 Francisco Gonzalez (Pacho) - Modern Portfolio
+# 🚀 Francisco (Pacho) Gonzalez - Modern Portfolio
 
 ## 📋 Descripción
 
@@ -31,7 +31,7 @@ Portfolio moderno y responsivo desarrollado con **React + Vite + Tailwind CSS** 
 
 ## 📄 Licencia
 
-© 2024 Francisco Gonzalez (Pacho). Todos los derechos reservados.
+© 2024 Francisco (Pacho) Gonzalez. Todos los derechos reservados.
 
 ---
 

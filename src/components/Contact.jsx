@@ -1,12 +1,63 @@
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react'
+import { Mail, MapPin, Send, MessageSquare, AlertCircle, CheckCircle } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    website: '' // Honeypot field
   })
+  const [formStatus, setFormStatus] = useState({ type: '', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitCount, setSubmitCount] = useState(0)
+  const [lastSubmitTime, setLastSubmitTime] = useState(0)
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const validateForm = () => {
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormStatus({ type: 'error', message: 'Por favor completa todos los campos requeridos.' })
+      return false
+    }
+
+    if (formData.name.trim().length < 3) {
+      setFormStatus({ type: 'error', message: 'El nombre debe tener al menos 3 caracteres.' })
+      return false
+    }
+
+    if (!validateEmail(formData.email)) {
+      setFormStatus({ type: 'error', message: 'Por favor ingresa un email válido.' })
+      return false
+    }
+
+    if (formData.message.trim().length < 10) {
+      setFormStatus({ type: 'error', message: 'El mensaje debe tener al menos 10 caracteres.' })
+      return false
+    }
+
+    // Honeypot check - if website field is filled, it's likely a bot
+    if (formData.website) {
+      setFormStatus({ type: 'error', message: 'Ha ocurrido un error. Por favor intenta nuevamente.' })
+      return false
+    }
+
+    // Rate limiting - max 3 submissions per minute
+    const now = Date.now()
+    if (now - lastSubmitTime < 60000) {
+      if (submitCount >= 3) {
+        setFormStatus({ type: 'error', message: 'Demasiados intentos. Por favor espera un momento.' })
+        return false
+      }
+    } else {
+      setSubmitCount(0)
+    }
+
+    return true
+  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -14,28 +65,69 @@ const Contact = () => {
       ...prev,
       [name]: value
     }))
+    // Clear status when user starts typing
+    if (formStatus.type) {
+      setFormStatus({ type: '', message: '' })
+    }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Create WhatsApp message
-    const whatsappMessage = `Hola! 👋
 
-*Nombre:* ${formData.name}
-*Email:* ${formData.email}
+    if (!validateForm()) {
+      return
+    }
+
+    setIsSubmitting(true)
+    const now = Date.now()
+
+    try {
+      // Sanitize input to prevent XSS
+      const sanitizeText = (text) => {
+        return text
+          .trim()
+          .replace(/[<>]/g, '')
+          .substring(0, 500)
+      }
+
+      const sanitizedName = sanitizeText(formData.name)
+      const sanitizedEmail = formData.email.toLowerCase().trim()
+      const sanitizedMessage = sanitizeText(formData.message)
+
+      // Create WhatsApp message
+      const whatsappMessage = `Hola! 👋
+
+*Nombre:* ${sanitizedName}
+*Email:* ${sanitizedEmail}
 
 *Mensaje:*
-${formData.message}
+${sanitizedMessage}
 
 Me interesa trabajar contigo en un proyecto web.`
 
-    const encodedMessage = encodeURIComponent(whatsappMessage)
-    const whatsappUrl = `https://wa.me/52?text=${encodedMessage}`
-    
-    window.open(whatsappUrl, '_blank')
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' })
+      const encodedMessage = encodeURIComponent(whatsappMessage)
+      const whatsappUrl = `https://wa.me/52?text=${encodedMessage}`
+
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank')
+
+      // Update submit tracking
+      setSubmitCount(submitCount + 1)
+      setLastSubmitTime(now)
+
+      // Show success message
+      setFormStatus({ type: 'success', message: '¡Mensaje enviado correctamente! Se abrirá WhatsApp en un momento.' })
+
+      // Reset form after delay
+      setTimeout(() => {
+        setFormData({ name: '', email: '', message: '', website: '' })
+        setFormStatus({ type: '', message: '' })
+      }, 3000)
+    } catch (error) {
+      setFormStatus({ type: 'error', message: 'Ha ocurrido un error. Por favor intenta nuevamente.' })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -77,7 +169,19 @@ Me interesa trabajar contigo en un proyecto web.`
                 Envíame un Mensaje
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                {/* Honeypot field - hidden from users */}
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleInputChange}
+                  style={{ display: 'none' }}
+                  tabIndex="-1"
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
+
                 <div>
                   <label htmlFor="name" className="block text-slate-300 font-medium mb-2">
                     Nombre Completo
@@ -88,9 +192,11 @@ Me interesa trabajar contigo en un proyecto web.`
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all"
+                    disabled={isSubmitting}
+                    maxLength="100"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Tu nombre completo"
+                    autoComplete="name"
                   />
                 </div>
 
@@ -104,9 +210,11 @@ Me interesa trabajar contigo en un proyecto web.`
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all"
+                    disabled={isSubmitting}
+                    maxLength="120"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="tu@email.com"
+                    autoComplete="email"
                   />
                 </div>
 
@@ -119,26 +227,47 @@ Me interesa trabajar contigo en un proyecto web.`
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
+                    disabled={isSubmitting}
+                    maxLength="1000"
                     rows={5}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Cuéntame sobre tu proyecto: ¿Qué tipo de sitio tienes? ¿Qué funcionalidades necesitas? ¿Cuáles son tus objetivos?"
+                    autoComplete="off"
                   />
                 </div>
 
+                {/* Status Messages */}
+                {formStatus.message && (
+                  <div className={`p-4 rounded-lg flex items-start gap-3 ${
+                    formStatus.type === 'error'
+                      ? 'bg-red-500/20 border border-red-500/30'
+                      : 'bg-green-500/20 border border-green-500/30'
+                  }`}>
+                    {formStatus.type === 'error' ? (
+                      <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+                    ) : (
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    )}
+                    <p className={formStatus.type === 'error' ? 'text-red-300 text-sm' : 'text-green-300 text-sm'}>
+                      {formStatus.message}
+                    </p>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full btn-primary flex items-center justify-center gap-2 text-lg py-4"
+                  disabled={isSubmitting}
+                  className="w-full btn-primary flex items-center justify-center gap-2 text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                 >
                   <Send className="w-5 h-5" />
-                  Enviar por WhatsApp
+                  {isSubmitting ? 'Procesando...' : 'Enviar por WhatsApp'}
                 </button>
               </form>
 
-              <div className="mt-6 p-4 bg-primary-500/10 border border-primary-500/30 rounded-lg">
-                <p className="text-primary-400 text-sm">
-                  <strong>📱 WhatsApp Directo:</strong> Al enviar el formulario, se abrirá WhatsApp con tu mensaje pre-escrito. 
-                  ¡Es la forma más rápida de conectar!
+              <div className="mt-6 p-4 bg-slate-700/50 border border-slate-600 rounded-lg">
+                <p className="text-slate-400 text-sm">
+                  <strong>📱 Formulario Seguro:</strong> Al enviar el formulario, se abrirá WhatsApp con tu mensaje pre-escrito.
+                  Tu información está protegida contra bots.
                 </p>
               </div>
             </div>
@@ -180,26 +309,6 @@ Me interesa trabajar contigo en un proyecto web.`
                     </div>
                   </div>
                 ))}
-              </div>
-
-              {/* Direct WhatsApp CTA */}
-              <div className="bg-gradient-to-r from-green-600/20 to-green-400/20 rounded-xl p-6 border border-green-500/30">
-                <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-green-400" />
-                  WhatsApp Directo
-                </h4>
-                <p className="text-slate-300 mb-4 text-sm">
-                  ¿Prefieres ir directo al grano? Envíame un mensaje por WhatsApp.
-                </p>
-                <a 
-                  href="https://wa.me/52?text=Hola!%20Me%20interesa%20trabajar%20contigo%20en%20un%20proyecto%20web."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  Abrir WhatsApp
-                </a>
               </div>
 
               {/* Response Time */}
