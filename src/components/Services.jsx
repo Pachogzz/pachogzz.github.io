@@ -13,8 +13,8 @@ const Services = () => {
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Desarrollo ReactJS",
-      description: "Desarrollo aplicaciones web modernas y rápidas con ReactJS, ofreciendo experiencias de usuario excepcionales."
+      title: "Desarrollo Web Moderno",
+      description: "Desarrollo aplicaciones web modernas y rápidas utilizando tecnologías y frameworks contemporáneos, ofreciendo experiencias de usuario excepcionales."
     },
     {
       icon: <Palette className="w-8 h-8" />,
@@ -33,7 +33,7 @@ const Services = () => {
             <span className="gradient-text">Especialidad</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            <span className="text-primary-400 font-semibold">Migrar sitios estáticos a 100% administrable</span> en WordPress o con ReactJS y JavaScript.
+            <span className="text-primary-400 font-semibold">Migrar sitios estáticos a 100% administrable</span> en WordPress o con tecnologías web modernas.
           </p>
         </div>
 

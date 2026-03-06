@@ -23,6 +23,8 @@ const Skills = () => {
         { name: "WooCommerce", level: 85, icon: <Settings className="w-5 h-5" /> },
         { name: "Elementor", level: 88, icon: <Layers className="w-5 h-5" /> },
         { name: "ACF Pro", level: 92, icon: <Database className="w-5 h-5" /> },
+        { name: "JetEngine", level: 80, icon: <Zap className="w-5 h-5" /> },
+        { name: "HubSpot", level: 75, icon: <Users className="w-5 h-5" /> },
         { name: "Shopify", level: 60, icon: <Globe className="w-5 h-5" /> },
         { name: "Webflow", level: 60, icon: <Layers className="w-5 h-5" /> },
       ]
