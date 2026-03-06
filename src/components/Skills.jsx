@@ -23,8 +23,8 @@ const Skills = () => {
         { name: "WooCommerce", level: 85, icon: <Settings className="w-5 h-5" /> },
         { name: "Elementor", level: 88, icon: <Layers className="w-5 h-5" /> },
         { name: "ACF Pro", level: 92, icon: <Database className="w-5 h-5" /> },
-        { name: "JetEngine", level: 80, icon: <Zap className="w-5 h-5" /> },
-        { name: "HubSpot", level: 75, icon: <Users className="w-5 h-5" /> },
+        { name: "Shopify", level: 60, icon: <Globe className="w-5 h-5" /> },
+        { name: "Webflow", level: 60, icon: <Layers className="w-5 h-5" /> },
       ]
     },
     {
@@ -34,9 +34,9 @@ const Skills = () => {
         { name: "HTML5", level: 95, icon: <Code2 className="w-5 h-5" /> },
         { name: "CSS3", level: 90, icon: <Palette className="w-5 h-5" /> },
         { name: "JavaScript (ES6)", level: 85, icon: <Code2 className="w-5 h-5" /> },
-        { name: "React", level: 82, icon: <Code2 className="w-5 h-5" /> },
         { name: "Bootstrap", level: 88, icon: <Smartphone className="w-5 h-5" /> },
         { name: "Tailwind CSS", level: 85, icon: <Palette className="w-5 h-5" /> },
+        { name: "Responsive Design", level: 90, icon: <Monitor className="w-5 h-5" /> },
       ]
     },
     {

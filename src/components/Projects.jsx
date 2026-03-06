@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
@@ -89,29 +89,11 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div className="relative overflow-hidden group">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-primary-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex space-x-4">
-                    <a 
-                      href={project.link}
-                      className="p-2 bg-white rounded-full text-slate-900 hover:bg-slate-200 transition-colors"
-                      title="Ver proyecto"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                    <a 
-                      href={project.github}
-                      className="p-2 bg-white rounded-full text-slate-900 hover:bg-slate-200 transition-colors"
-                      title="Ver código"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
               </div>
 
               {/* Project Content */}
@@ -142,16 +124,6 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Project Links */}
-                <div className="flex items-center justify-between">
-                  <a 
-                    href={project.link}
-                    className="text-primary-400 hover:text-primary-300 font-medium flex items-center gap-1 transition-colors"
-                  >
-                    Ver Proyecto
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
               </div>
             </div>
           ))}
