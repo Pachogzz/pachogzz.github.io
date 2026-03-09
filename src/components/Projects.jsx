@@ -8,8 +8,16 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Grupo Experto Logístico ENMA",
-      description: "Sitio web corporativo personalizado para ENMA desarrollado con WordPress. Implementé Advanced Custom Fields (ACF) para crear una experiencia de administración intuitiva y flexible.",
+      content: {
+        es: {
+          title: "Grupo Experto Logístico ENMA",
+          description: "Sitio web corporativo personalizado para ENMA desarrollado con WordPress. Implementé Advanced Custom Fields (ACF) para crear una experiencia de administración intuitiva y flexible.",
+        },
+        en: {
+          title: "ENMA Logistics Expert Group",
+          description: "Custom corporate website for ENMA developed with WordPress. I implemented Advanced Custom Fields (ACF) to create an intuitive and flexible administration experience.",
+        }
+      },
       image: "images/portfolio/enma-screenshot.jpg",
       technologies: ["WordPress", "ACF Pro", "PHP", "CSS3", "JavaScript"],
       category: "WordPress Development",
@@ -18,8 +26,16 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "LOCI - Logística Internacional",
-      description: "Portal corporativo multilingüe para empresa de logística internacional. Desarrollado con WordPress y optimizado para múltiples idiomas y regiones.",
+      content: {
+        es: {
+          title: "LOCI - Logística Internacional",
+          description: "Portal corporativo multilingüe para empresa de logística internacional. Desarrollado con WordPress y optimizado para múltiples idiomas y regiones.",
+        },
+        en: {
+          title: "LOCI - International Logistics",
+          description: "Multilingual corporate portal for an international logistics company. Developed with WordPress and optimized for multiple languages and regions.",
+        }
+      },
       image: "images/portfolio/loci-screenshot.jpg",
       technologies: ["WordPress", "Multilingual", "WooCommerce", "ACF"],
       category: "WordPress Development",
@@ -28,8 +44,16 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "TCA Software Solutions",
-      description: "Portal corporativo multilingüe para proveedor de soluciones de software. Diseño moderno y funcionalidades avanzadas de gestión de contenido.",
+      content: {
+        es: {
+          title: "TCA Software Solutions",
+          description: "Portal corporativo multilingüe para proveedor de soluciones de software. Diseño moderno y funcionalidades avanzadas de gestión de contenido.",
+        },
+        en: {
+          title: "TCA Software Solutions",
+          description: "Multilingual corporate portal for a software solutions provider. Modern design with advanced content management features.",
+        }
+      },
       image: "images/portfolio/tcass-screenshot.jpg",
       technologies: ["WordPress", "Elementor", "ACF Pro", "Multilingual"],
       category: "WordPress Development", 
@@ -38,8 +62,16 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "UANL - Portal Universitario",
-      description: "Portal institucional para la Universidad Autónoma de Nuevo León. Desarrollo de tema personalizado con funcionalidades específicas para el sector educativo.",
+      content: {
+        es: {
+          title: "UANL - Portal Universitario",
+          description: "Portal institucional para la Universidad Autónoma de Nuevo León. Desarrollo de tema personalizado con funcionalidades específicas para el sector educativo.",
+        },
+        en: {
+          title: "UANL - University Portal",
+          description: "Institutional portal for the Autonomous University of Nuevo León. Custom theme development with specific features for the educational sector.",
+        }
+      },
       image: "images/portfolio/uanl-screenshot.jpg",
       technologies: ["WordPress", "Custom Theme", "PHP", "MySQL"],
       category: "WordPress Development",
@@ -48,8 +80,16 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "Dosachi eCommerce",
-      description: "Tienda en línea para productos de limpieza y desinfectantes. Implementación completa de WooCommerce con funcionalidades de pago y gestión de inventario.",
+      content: {
+        es: {
+          title: "Dosachi eCommerce",
+          description: "Tienda en línea para productos de limpieza y desinfectantes. Implementación completa de WooCommerce con funcionalidades de pago y gestión de inventario.",
+        },
+        en: {
+          title: "Dosachi eCommerce",
+          description: "Online store for cleaning and disinfectant products. Full WooCommerce implementation including payment features and inventory management.",
+        }
+      },
       image: "images/portfolio/dosachi-screenshot.jpg",
       technologies: ["WordPress", "WooCommerce", "Payment Gateway", "ACF"],
       category: "eCommerce",
@@ -58,8 +98,16 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "Concepto Trading UI/UX",
-      description: "Diseño de interfaz para plataforma de trading y fondeo de cuentas. Creado en Figma con enfoque en experiencia de usuario y funcionalidad financiera.",
+      content: {
+        es: {
+          title: "Concepto Trading UI/UX",
+          description: "Diseño de interfaz para plataforma de trading y fondeo de cuentas. Creado en Figma con enfoque en experiencia de usuario y funcionalidad financiera.",
+        },
+        en: {
+          title: "Concepto Trading UI/UX",
+          description: "Interface design for a trading and account funding platform. Created in Figma with a focus on user experience and financial functionality.",
+        }
+      },
       image: "images/portfolio/financial-concept-screenshot.jpg",
       technologies: ["Figma", "UI/UX Design", "Prototyping"],
       category: "UI/UX Design",
@@ -95,7 +143,7 @@ const Projects = () => {
               <div className="relative overflow-hidden group">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.content[language].title}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
@@ -109,11 +157,11 @@ const Projects = () => {
                 </div>
                 
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {project.title}
+                  {project.content[language].title}
                 </h3>
                 
                 <p className="text-slate-400 mb-4 leading-relaxed">
-                  {project.description}
+                  {project.content[language].description}
                 </p>
 
                 {/* Technologies */}

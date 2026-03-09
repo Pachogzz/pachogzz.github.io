@@ -38,7 +38,7 @@ const Services = () => {
             <span className="gradient-text">{t.services.titleGradient}</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            <span className="text-primary-400 font-semibold">Migrar sitios estáticos a 100% administrable</span> {t.services.subtitle}
+            <span className="text-primary-400 font-semibold">{t.services.subtitle}</span>
           </p>
         </div>
 
