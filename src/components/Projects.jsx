@@ -1,6 +1,10 @@
 import { ArrowRight } from 'lucide-react'
+import { useLanguage } from '../LanguageContext'
+import { translations } from '../translations'
 
 const Projects = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const projects = [
     {
       id: 1,
@@ -70,11 +74,11 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Proyectos </span>
-            <span className="gradient-text">Destacados</span>
+            <span className="text-white">{t.projects.title}</span>
+            <span className="gradient-text">{t.projects.titleGradient}</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            Una selección de proyectos que demuestran mi experiencia en desarrollo WordPress, eCommerce y diseño UI/UX.
+            {t.projects.subtitle}
           </p>
         </div>
 
@@ -135,7 +139,7 @@ const Projects = () => {
             href="#contact"
             className="btn-primary inline-flex items-center gap-2"
           >
-            Hablemos de Tu Proyecto
+            {t.projects.cta}
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>

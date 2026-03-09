@@ -1,45 +1,49 @@
 import { Award, Clock, Heart, Target } from 'lucide-react'
+import { useLanguage } from '../LanguageContext'
+import { translations } from '../translations'
 
 const About = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const highlights = [
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "15+ Años",
-      description: "De experiencia en desarrollo web"
+      title: t.about.highlightYears,
+      description: t.about.highlightYearsDesc
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "12 Años",
-      description: "Especializándome en WordPress"
+      title: t.about.highlightSpecialization,
+      description: t.about.highlightSpecializationDesc
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "100+",
-      description: "Proyectos completados exitosamente"
+      title: t.about.highlightProjects,
+      description: t.about.highlightProjectsDesc
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      title: "Pasión",
-      description: "Por crear soluciones innovadoras"
+      title: t.about.highlightPassion,
+      description: t.about.highlightPassionDesc
     }
   ]
 
   const values = [
     {
-      title: "Calidad",
-      description: "Cada proyecto es desarrollado con los más altos estándares de calidad y mejores prácticas de la industria."
+      title: t.about.valueQuality,
+      description: t.about.valueQualityDesc
     },
     {
-      title: "Innovación", 
-      description: "Siempre busco implementar las últimas tecnologías y tendencias para crear soluciones modernas."
+      title: t.about.valueInnovation,
+      description: t.about.valueInnovationDesc
     },
     {
-      title: "Comunicación",
-      description: "Mantengo una comunicación clara y constante durante todo el proceso de desarrollo."
+      title: t.about.valueCommunication,
+      description: t.about.valueCommunicationDesc
     },
     {
-      title: "Compromiso",
-      description: "Me comprometo con cada proyecto como si fuera propio, asegurando resultados excepcionales."
+      title: t.about.valueCommitment,
+      description: t.about.valueCommitmentDesc
     }
   ]
 
@@ -49,11 +53,11 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Acerca de </span>
-            <span className="gradient-text">Mí</span>
+            <span className="text-white">{t.about.title}</span>
+            <span className="gradient-text">{t.about.titleGradient}</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            Profesional autodidacta, motivado y con gran capacidad para adoptar nuevas tecnologías y procesos.
+            {t.about.subtitle}
           </p>
         </div>
 
@@ -81,32 +85,32 @@ const About = () => {
           {/* About Content */}
           <div data-aos="fade-left">
             <h3 className="text-2xl font-bold text-white mb-6">
-              Francisco (Pacho) Gonzalez
+              {t.about.name}
             </h3>
-            
+
             <div className="space-y-4 text-slate-400 leading-relaxed mb-8">
               <p>
-                Soy un desarrollador WordPress con más de <span className="text-primary-400 font-semibold">15 años de experiencia</span> en el ciclo completo de desarrollo web. Durante los últimos 12 años, me he especializado profundamente en WordPress, convirtiéndome en un experto en el desarrollo de temas y soluciones personalizadas.
+                {t.about.para1Start}<span className="text-primary-400 font-semibold">{t.about.para1Highlight}</span> {t.about.para1End}
               </p>
-              
+
               <p>
-                Mi formación en <span className="text-primary-400 font-semibold">Diseño Gráfico</span> me permite combinar habilidades técnicas con sensibilidad visual, creando experiencias de usuario (UX) que no solo funcionan perfectamente, sino que también son intuitivas y atractivas.
+                {t.about.para2Start}<span className="text-primary-400 font-semibold">{t.about.para2Highlight}</span> {t.about.para2End}
               </p>
-              
+
               <p>
-                Como profesional <span className="text-primary-400 font-semibold">autodidacta</span>, estoy constantemente aprendiendo y adaptándome a las nuevas tecnologías. Esta mentalidad me ha permitido mantenerme al día con las últimas tendencias y mejores prácticas en desarrollo web.
+                {t.about.para3Start}<span className="text-primary-400 font-semibold">{t.about.para3Highlight}</span> {t.about.para3End}
               </p>
             </div>
 
             {/* Contact Info */}
             <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-              <h4 className="text-lg font-semibold text-white mb-4">Contacto Directo</h4>
+              <h4 className="text-lg font-semibold text-white mb-4">{t.about.contactTitle}</h4>
               <div className="space-y-2">
                 <p className="text-slate-400">
-                  <span className="text-primary-400">📍</span> Monterrey, Nuevo León, México
+                  <span className="text-primary-400">📍</span> {t.about.location}
                 </p>
                 <p className="text-slate-400">
-                  <span className="text-primary-400">📧</span> pachogzzm [at] gmail [dot] com
+                  <span className="text-primary-400">📧</span> {t.about.email}
                 </p>
               </div>
             </div>
@@ -138,7 +142,7 @@ const About = () => {
         {/* Values */}
         <div data-aos="fade-up" data-aos-delay="400">
           <h3 className="text-2xl font-bold text-white text-center mb-12">
-            Mis Valores Profesionales
+            {t.about.valuesTitle}
           </h3>
           
           <div className="grid md:grid-cols-2 gap-6">
