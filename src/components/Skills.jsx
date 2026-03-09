@@ -1,9 +1,9 @@
-import { 
-  Code2, 
-  Palette, 
-  Database, 
-  Globe, 
-  Figma, 
+import {
+  Code2,
+  Palette,
+  Database,
+  Globe,
+  Figma,
   Github,
   Users,
   Zap,
@@ -12,8 +12,12 @@ import {
   Smartphone,
   Settings
 } from 'lucide-react'
+import { useLanguage } from '../LanguageContext'
+import { translations } from '../translations'
 
 const Skills = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const skillCategories = [
     {
       title: "CMS & Desarrollo Web",
@@ -65,16 +69,7 @@ const Skills = () => {
     }
   ]
 
-  const softSkills = [
-    "Comunicación Efectiva",
-    "Adaptabilidad", 
-    "Liderazgo de Proyectos",
-    "Negociación",
-    "Empatía",
-    "Trabajo bajo presión",
-    "Autodidacta",
-    "Proactivo"
-  ]
+  const softSkills = t.skills.softSkills
 
   return (
     <section id="skills" className="section-padding">
@@ -82,11 +77,11 @@ const Skills = () => {
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Habilidades & </span>
-            <span className="gradient-text">Tecnologías</span>
+            <span className="text-white">{t.skills.title}</span>
+            <span className="gradient-text">{t.skills.titleGradient}</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            Más de una década perfeccionando estas tecnologías para crear soluciones web excepcionales.
+            {t.skills.subtitle}
           </p>
         </div>
 
@@ -141,17 +136,17 @@ const Skills = () => {
         </div>
 
         {/* Soft Skills */}
-        <div 
+        <div
           className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-xl p-8 border border-slate-600"
           data-aos="fade-up"
           data-aos-delay="400"
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Habilidades Interpersonales
+              {t.skills.softSkillsTitle}
             </h3>
             <p className="text-slate-400">
-              Competencias que complementan mi expertise técnico para proyectos exitosos.
+              {t.skills.softSkillsDesc}
             </p>
           </div>
 

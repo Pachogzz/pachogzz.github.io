@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+import { LanguageProvider } from './LanguageContext'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Skills from './components/Skills'
@@ -10,7 +11,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
-function App() {
+function AppContent() {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -30,6 +31,14 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   )
 }
 

@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { Mail, MapPin, Send, MessageSquare, AlertCircle, CheckCircle } from 'lucide-react'
+import { useLanguage } from '../LanguageContext'
+import { translations } from '../translations'
 
 const Contact = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,28 +24,28 @@ const Contact = () => {
 
   const validateForm = () => {
     if (!formData.name || !formData.email || !formData.message) {
-      setFormStatus({ type: 'error', message: 'Por favor completa todos los campos requeridos.' })
+      setFormStatus({ type: 'error', message: t.contact.formErrors.required })
       return false
     }
 
     if (formData.name.trim().length < 3) {
-      setFormStatus({ type: 'error', message: 'El nombre debe tener al menos 3 caracteres.' })
+      setFormStatus({ type: 'error', message: t.contact.formErrors.nameLength })
       return false
     }
 
     if (!validateEmail(formData.email)) {
-      setFormStatus({ type: 'error', message: 'Por favor ingresa un email válido.' })
+      setFormStatus({ type: 'error', message: t.contact.formErrors.invalidEmail })
       return false
     }
 
     if (formData.message.trim().length < 10) {
-      setFormStatus({ type: 'error', message: 'El mensaje debe tener al menos 10 caracteres.' })
+      setFormStatus({ type: 'error', message: t.contact.formErrors.messageLength })
       return false
     }
 
     // Honeypot check - if website field is filled, it's likely a bot
     if (formData.website) {
-      setFormStatus({ type: 'error', message: 'Ha ocurrido un error. Por favor intenta nuevamente.' })
+      setFormStatus({ type: 'error', message: t.contact.formErrors.botDetected })
       return false
     }
 
@@ -49,7 +53,7 @@ const Contact = () => {
     const now = Date.now()
     if (now - lastSubmitTime < 60000) {
       if (submitCount >= 3) {
-        setFormStatus({ type: 'error', message: 'Demasiados intentos. Por favor espera un momento.' })
+        setFormStatus({ type: 'error', message: t.contact.formErrors.rateLimit })
         return false
       }
     } else {
@@ -116,7 +120,7 @@ Me interesa trabajar contigo en un proyecto web.`
       setLastSubmitTime(now)
 
       // Show success message
-      setFormStatus({ type: 'success', message: '¡Mensaje enviado correctamente! Se abrirá WhatsApp en un momento.' })
+      setFormStatus({ type: 'success', message: t.contact.formSuccess })
 
       // Reset form after delay
       setTimeout(() => {
@@ -124,7 +128,7 @@ Me interesa trabajar contigo en un proyecto web.`
         setFormStatus({ type: '', message: '' })
       }, 3000)
     } catch (error) {
-      setFormStatus({ type: 'error', message: 'Ha ocurrido un error. Por favor intenta nuevamente.' })
+      setFormStatus({ type: 'error', message: t.contact.formErrors.botDetected })
     } finally {
       setIsSubmitting(false)
     }
@@ -133,15 +137,15 @@ Me interesa trabajar contigo en un proyecto web.`
   const contactInfo = [
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Ubicación",
-      info: "Monterrey, Nuevo León",
-      subinfo: "México 64370"
+      title: t.contact.locationTitle,
+      info: t.contact.locationValue,
+      subinfo: t.contact.locationSubinfo
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      info: "pachogzzm [at] gmail [dot] com",
-      subinfo: "Respuesta en 24h"
+      title: t.contact.emailTitle,
+      info: t.contact.emailValue,
+      subinfo: t.contact.emailSubinfo
     }
   ]
 
@@ -151,12 +155,11 @@ Me interesa trabajar contigo en un proyecto web.`
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Hablemos de Tu </span>
-            <span className="gradient-text">Proyecto</span>
+            <span className="text-white">{t.contact.title}</span>
+            <span className="gradient-text">{t.contact.titleGradient}</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            ¿Tienes un sitio web que necesita modernizarse? ¿Quieres migrar de estático a WordPress? 
-            ¡Conversemos sobre cómo puedo ayudarte!
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -166,9 +169,9 @@ Me interesa trabajar contigo en un proyecto web.`
             <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <MessageSquare className="w-6 h-6 text-primary-400" />
-                Envíame un Mensaje
+                {t.contact.formTitle}
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                 {/* Honeypot field - hidden from users */}
                 <input
@@ -184,7 +187,7 @@ Me interesa trabajar contigo en un proyecto web.`
 
                 <div>
                   <label htmlFor="name" className="block text-slate-300 font-medium mb-2">
-                    Nombre Completo
+                    {t.contact.nameLabel}
                   </label>
                   <input
                     type="text"
@@ -195,14 +198,14 @@ Me interesa trabajar contigo en un proyecto web.`
                     disabled={isSubmitting}
                     maxLength="100"
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="Tu nombre completo"
+                    placeholder={t.contact.namePlaceholder}
                     autoComplete="name"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-slate-300 font-medium mb-2">
-                    Email
+                    {t.contact.emailLabel}
                   </label>
                   <input
                     type="email"
@@ -213,14 +216,14 @@ Me interesa trabajar contigo en un proyecto web.`
                     disabled={isSubmitting}
                     maxLength="120"
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="tu@email.com"
+                    placeholder={t.contact.emailPlaceholder}
                     autoComplete="email"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-slate-300 font-medium mb-2">
-                    Mensaje
+                    {t.contact.messageLabel}
                   </label>
                   <textarea
                     id="message"
@@ -231,7 +234,7 @@ Me interesa trabajar contigo en un proyecto web.`
                     maxLength="1000"
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="Cuéntame sobre tu proyecto: ¿Qué tipo de sitio tienes? ¿Qué funcionalidades necesitas? ¿Cuáles son tus objetivos?"
+                    placeholder={t.contact.messagePlaceholder}
                     autoComplete="off"
                   />
                 </div>
@@ -260,14 +263,13 @@ Me interesa trabajar contigo en un proyecto web.`
                   className="w-full btn-primary flex items-center justify-center gap-2 text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                 >
                   <Send className="w-5 h-5" />
-                  {isSubmitting ? 'Procesando...' : 'Enviar por WhatsApp'}
+                  {isSubmitting ? t.contact.submitButtonLoading : t.contact.submitButton}
                 </button>
               </form>
 
               <div className="mt-6 p-4 bg-slate-700/50 border border-slate-600 rounded-lg">
                 <p className="text-slate-400 text-sm">
-                  <strong>📱 Formulario Seguro:</strong> Al enviar el formulario, se abrirá WhatsApp con tu mensaje pre-escrito.
-                  Tu información está protegida contra bots.
+                  {t.contact.formSecurityNote}
                 </p>
               </div>
             </div>
@@ -278,11 +280,10 @@ Me interesa trabajar contigo en un proyecto web.`
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">
-                  Información de Contacto
+                  {t.contact.contactInfoTitle}
                 </h3>
                 <p className="text-slate-400 leading-relaxed mb-8">
-                  Estoy siempre disponible para discutir nuevos proyectos y oportunidades. 
-                  No dudes en contactarme por cualquier canal que prefieras.
+                  {t.contact.contactInfoDesc}
                 </p>
               </div>
 
@@ -313,10 +314,9 @@ Me interesa trabajar contigo en un proyecto web.`
 
               {/* Response Time */}
               <div className="text-center p-6 bg-slate-900/50 rounded-xl border border-slate-700">
-                <h4 className="text-primary-400 font-semibold mb-2">⚡ Tiempo de Respuesta</h4>
+                <h4 className="text-primary-400 font-semibold mb-2">{t.contact.responseTimeTitle}</h4>
                 <p className="text-slate-300 text-sm">
-                  Respondo todos los mensajes en un máximo de <strong>24 horas</strong>.
-                  WhatsApp generalmente en pocas horas.
+                  {t.contact.responseTimeDesc}
                 </p>
               </div>
             </div>

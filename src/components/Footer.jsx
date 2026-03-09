@@ -1,6 +1,10 @@
 import { Heart, Linkedin, Github, Mail, Phone } from 'lucide-react'
+import { useLanguage } from '../LanguageContext'
+import { translations } from '../translations'
 
 const Footer = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
@@ -31,12 +35,12 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Habilidades', href: '#skills' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Acerca de Mí', href: '#about' },
-    { name: 'Contacto', href: '#contact' }
+    { name: t.footer.quickLink1, href: '#hero' },
+    { name: t.footer.quickLink2, href: '#services' },
+    { name: t.footer.quickLink3, href: '#skills' },
+    { name: t.footer.quickLink4, href: '#projects' },
+    { name: t.footer.quickLink5, href: '#about' },
+    { name: t.footer.quickLink6, href: '#contact' }
   ]
 
   const scrollToTop = () => {
@@ -58,17 +62,17 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-slate-400 leading-relaxed">
-              Desarrollador WordPress con más de 15 años de experiencia; especializado en migración de sitios estáticos a WordPress y desarrollo con Tecnologías Modernas.
+              {t.footer.description}
             </p>
             <div className="text-slate-400 text-sm">
-              <p>📍 Monterrey, Nuevo León, México</p>
-              <p>📧 pachogzzm [at] gmail [dot] com</p>
+              <p>{t.footer.location}</p>
+              <p>{t.footer.email}</p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.quickLinksTitle}</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -85,9 +89,9 @@ const Footer = () => {
 
           {/* Contact & Social */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Conecta Conmigo</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.connectTitle}</h4>
             <p className="text-slate-400 mb-4 text-sm">
-              Sígueme en redes sociales y mantente al día con mis últimos proyectos.
+              {t.footer.connectDesc}
             </p>
             <div className="flex space-x-4 mb-6">
               {socialLinks.map((social, index) => (
@@ -107,13 +111,13 @@ const Footer = () => {
             {/* CTA */}
             <div className="bg-primary-600/10 border border-primary-500/30 rounded-lg p-4">
               <p className="text-primary-400 font-medium text-sm mb-2">
-                ¿Listo para tu proyecto?
+                {t.footer.ctaLabel}
               </p>
-              <a 
+              <a
                 href="#contact"
                 className="text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium"
               >
-                Hablemos ahora →
+                {t.footer.ctaLink}
               </a>
             </div>
           </div>
@@ -125,18 +129,16 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-slate-400 text-sm text-center md:text-left">
               <p className="flex items-center justify-center md:justify-start gap-1">
-                © {currentYear} Francisco (Pacho) Gonzalez. Hecho con 
-                <Heart className="w-4 h-4 text-red-500 animate-pulse" /> 
-                en Monterrey, México.
+                {t.footer.copyright.replace('{year}', currentYear)}
               </p>
             </div>
 
             {/* Back to Top */}
-            <button 
+            <button
               onClick={scrollToTop}
               className="text-slate-400 hover:text-primary-400 transition-colors text-sm flex items-center gap-1 hover:translate-y-[-2px] transform transition-transform"
             >
-              Volver arriba ↑
+              {t.footer.backToTop}
             </button>
           </div>
         </div>
