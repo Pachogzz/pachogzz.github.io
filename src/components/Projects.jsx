@@ -18,7 +18,7 @@ const Projects = () => {
           description: "Custom corporate website for ENMA developed with WordPress. I implemented Advanced Custom Fields (ACF) to create an intuitive and flexible administration experience.",
         }
       },
-      image: "images/enma-screenshot.jpg",
+      image: "./images/portfolio/enma-screenshot.jpg",
       technologies: ["WordPress", "ACF Pro", "PHP", "CSS3", "JavaScript"],
       category: "WordPress Development",
       link: "#",
@@ -36,7 +36,7 @@ const Projects = () => {
           description: "Multilingual corporate portal for an international logistics company. Developed with WordPress and optimized for multiple languages and regions.",
         }
       },
-      image: "images/loci-screenshot.jpg",
+      image: "./images/portfolio/loci-screenshot.jpg",
       technologies: ["WordPress", "Multilingual", "WooCommerce", "ACF"],
       category: "WordPress Development",
       link: "#",
@@ -54,7 +54,7 @@ const Projects = () => {
           description: "Multilingual corporate portal for a software solutions provider. Modern design with advanced content management features.",
         }
       },
-      image: "images/tcass-screenshot.jpg",
+      image: "./images/portfolio/tcass-screenshot.jpg",
       technologies: ["WordPress", "Elementor", "ACF Pro", "Multilingual"],
       category: "WordPress Development", 
       link: "#",
@@ -72,7 +72,7 @@ const Projects = () => {
           description: "Institutional portal for the Autonomous University of Nuevo León. Custom theme development with specific features for the educational sector.",
         }
       },
-      image: "images/uanl-screenshot.jpg",
+      image: "./images/portfolio/uanl-screenshot.jpg",
       technologies: ["WordPress", "Custom Theme", "PHP", "MySQL"],
       category: "WordPress Development",
       link: "#",
@@ -90,7 +90,7 @@ const Projects = () => {
           description: "Online store for cleaning and disinfectant products. Full WooCommerce implementation including payment features and inventory management.",
         }
       },
-      image: "images/dosachi-screenshot.jpg",
+      image: "./images/portfolio/dosachi-screenshot.jpg",
       technologies: ["WordPress", "WooCommerce", "Payment Gateway", "ACF"],
       category: "eCommerce",
       link: "#",
@@ -108,7 +108,7 @@ const Projects = () => {
           description: "Interface design for a trading and account funding platform. Created in Figma with a focus on user experience and financial functionality.",
         }
       },
-      image: "images/financial-concept-screenshot.jpg",
+      image: "./images/portfolio/financial-concept-screenshot.jpg",
       technologies: ["Figma", "UI/UX Design", "Prototyping"],
       category: "UI/UX Design",
       link: "#",
