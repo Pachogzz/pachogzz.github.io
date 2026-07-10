@@ -20,7 +20,7 @@ const Skills = () => {
   const t = translations[language]
   const skillCategories = [
     {
-      title: "CMS & Desarrollo Web",
+      title: t.skills.cmsTitle,
       icon: <Globe className="w-6 h-6" />,
       skills: [
         { name: "WordPress", level: 90, icon: <Code2 className="w-5 h-5" /> },
@@ -34,7 +34,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Front-End",
+      title: t.skills.frontendTitle,
       icon: <Monitor className="w-6 h-6" />,
       skills: [
         { name: "HTML5", level: 95, icon: <Code2 className="w-5 h-5" /> },
@@ -46,7 +46,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Back-End & Herramientas",
+      title: t.skills.backendTitle,
       icon: <Database className="w-6 h-6" />,
       skills: [
         { name: "PHP", level: 85, icon: <Code2 className="w-5 h-5" /> },
@@ -58,7 +58,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Diseño",
+      title: t.skills.designTitle,
       icon: <Palette className="w-6 h-6" />,
       skills: [
         { name: "Figma", level: 88, icon: <Figma className="w-5 h-5" /> },
